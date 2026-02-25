@@ -1,47 +1,9 @@
-# 🚀 Astro Starter Pro
+Designed by [Devgelo Labs](https://github.com/devgelo-labs)
+# appliance_repiar_pro
 
-**Astro Starter Pro** is a professional, open-source template for building fast websites using **[Astro 5](https://astro.build/) + [Tailwind CSS 4](https://tailwindcss.com/)**. Designed with industry best practices, optimized SEO, and a modern development experience.
+Styled with 🚀 Astro Starter Pro https://github.com/devgelo-labs with free template 
 
-<br>
 
-[![GitHub stars](https://badgen.net/github/stars/devgelo-labs/astro-starter-pro?icon=github&label=Star)](https://github.com/devgelo-labs/astro-starter-pro)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](./LICENSE)
-[![Astro](https://img.shields.io/badge/Astro-5.0-orange?style=flat-square&logo=astro)](https://astro.build/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-4.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Maintainer](https://img.shields.io/badge/maintainer-devgelo-purple?style=flat-square)](https://github.com/devgelo-labs)
-
-<br>
-
-<details open>
-<summary>Table of Contents</summary>
-
-- [Demo](#demo)
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Configuration](#configuration)
-- [Commands](#commands)
-- [License](#license)
-
-</details>
-
-<br>
-
-## Demo
-
-📌 [https://astrostarterpro.com/](https://astrostarterpro.com/)
-
-## Features
-
-- ✅ **Dark & Light Mode**: Clean implementation.
-- ✅ **Optimized SEO**: Automatic meta tags, Structured Data (JSON-LD), RSS Feed, Open Graph, Twitter Cards, and native Sitemap.
-- ✅ **Clean Architecture**: Organized and scalable code.
-- ✅ **Reusable Components**: Navbar, Footer, and modern Layouts with Tailwind v4.
-
-<br>
-
-<img alt="Image" src="./github/astro-starter-pro.png" />
-
-<br>
 
 ## Quick Start
 
@@ -106,5 +68,3 @@ This project is under the **MIT** license. See the [LICENSE](./LICENSE) file for
 
 ---
 
-Designed by [Devgelo Labs](https://github.com/devgelo-labs)
-# appliance_repiar_pro
