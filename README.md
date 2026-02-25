@@ -1,4 +1,4 @@
-# appliance_repiar_pro
+# Appliance Repiar Pro
 
 Styled with 🚀 Astro Starter Pro https://github.com/devgelo-labs with free template 
 Designed by [Devgelo Labs] (https://github.com/devgelo-labs)
