@@ -1,17 +1,17 @@
 import ogImage from "../assets/og-image.png";
 
 export const siteConfig = {
-  name: "Astro Starter Pro",
-  description: "Starter template optimized for SEO and performance. A solid foundation to start your projects with best practices.",
-  url: "https://astrostarterpro.com",
+  name: "Reliable Home Appliance Service",
+  description: "Applaince Repair in Windsor, Ontario. Appliance Parts, Windsor, Ontario",
+  url: "https://appliancerepairpro.netlify.app/",
   lang: "en",
   locale: "en_US",
-  author: "Devgelo",
-  twitter: "@Devgelo",
+  author: "Maroyan Putros",
+  twitter: "na",
   ogImage: ogImage,
   socialLinks: {
-    twitter: "https://twitter.com",
-    github: "https://github.com/devgelo-labs/astro-starter-pro",
+    twitter: "https:/git /twitter.com",
+    github: "",
     discord: "https://discord.com",
   },
   navLinks: [
