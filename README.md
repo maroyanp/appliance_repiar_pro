@@ -28,6 +28,8 @@ https://github.com/devgelo-labs/astro-starter-pro.git
 
 <br>
 
+Used for carousels
+https://flowbite.com/
 
 ## License
 
