@@ -1,45 +1,17 @@
-Designed by [Devgelo Labs](https://github.com/devgelo-labs)
 # appliance_repiar_pro
 
 Styled with 🚀 Astro Starter Pro https://github.com/devgelo-labs with free template 
-
+Designed by [Devgelo Labs] (https://github.com/devgelo-labs)
 
 
 ## Quick Start
 
-To start with this project locally, clone the repository and install dependencies:
+To start with this project locally, go to his github page
 
-```bash
-# Clone the repository
-git clone https://github.com/devgelo-labs/astro-starter-pro.git
-
-# If you like it, don't forget to leave a star! ⭐
-cd astro-starter-pro
-npm install
-npm run dev
-```
+https://github.com/devgelo-labs/astro-starter-pro.git
 
 <br>
 
-## Configuration
-
-All global site information is managed in `src/config/site.ts`. Update this file with your data:
-
-```typescript
-// src/config/site.ts
-export const siteConfig = {
-  name: "Astro Starter Pro",
-  description: "Your SEO description",
-  url: "https://astrostarterpro.com",
-  author: "Angelo Pescetto",
-  // ...
-};
-```
-<br>
-
-<img alt="PageSpeed Insights Score 100/100" src="https://github.com/user-attachments/assets/541d4bfc-bcb9-4287-bd91-08564108d706" />
-
-<br>
 
 ## Commands
 
@@ -56,11 +28,6 @@ export const siteConfig = {
 
 <br>
 
-## Support the Project
-
-If you find this starter useful, please consider giving it a ⭐ on GitHub! It helps more people discover the project.
-
-<br>
 
 ## License
 
