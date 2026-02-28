@@ -2,7 +2,7 @@
 import { siteConfig } from "../../config/site";
 
 interface Props {
-    type: "WebSite" | "BlogPosting" | "BreadcrumbList";
+    type: "WebSite";
     data: {
         title?: string;
         description?: string;
@@ -28,7 +28,7 @@ if (type === "WebSite") {
             "@type": "Person",
             name: siteConfig.author,
         },
-        sameAs: [siteConfig.socialLinks.twitter, siteConfig.socialLinks.github],
+        // sameAs: [siteConfig.socialLinks.twitter, siteConfig.socialLinks.github],
     };
 } else if (type === "BlogPosting") {
     schema = {
