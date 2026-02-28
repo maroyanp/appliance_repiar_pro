@@ -16,6 +16,7 @@ export interface Feature {
 export type Value = Feature;
 
 export interface Service {
+[x: string]: any;
   title: string;
   description: string;
   icon: string;

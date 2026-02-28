@@ -31,6 +31,9 @@ https://github.com/devgelo-labs/astro-starter-pro.git
 Used for carousels
 https://flowbite.com/
 
+Icon packs 
+npm install @iconify-json/mdi
+
 ## License
 
 This project is under the **MIT** license. See the [LICENSE](./LICENSE) file for more details.
