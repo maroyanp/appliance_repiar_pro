@@ -3,44 +3,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { getImage } from "astro:assets";
 import Content2 from "../components/widgets/Content2.astro";
 import Values from "../components/widgets/Values.astro";
-import aboutImage from "../assets/images/about-office.webp";
+import aboutImage from "../assets/images/all_appliances.webp";
 
 const metadata = {
     title: "About us",
     description:
-        "Learn more about our vision, values, and the team behind Astro Starter Pro.",
+        "Learn more about our vision, values, and the team behind Reliable Home Appliance Service.",
 };
-
-const values = [
+const companyValues = [
     {
-        title: "Innovation",
+        title: "Same Day Repairs",
         description:
-            "Curabitur dignissim, felis non sollicitudin molestie, urna mauris pellentesque velit, ut eleifend.",
+            "We prioritize fast response times across Windsor-Essex to get your household back on track immediately. Most repairs are diagnosed and completed on the very same day.",
     },
     {
-        title: "Commitment",
+        title: "Flexible Scheduling",
         description:
-            "Aenean condimentum finibus mauris, a fermentum justo pan eget. Sed ultricies, neque quis.",
+            "Your time is valuable, so we offer convenient appointment windows that fit your busy life. We work around your schedule, including evening and weekend availability.",
     },
     {
-        title: "Quality",
+        title: "Quality of Service",
         description:
-            "Donec sed orci tincidunt, aliquam nisl a, condimentum nunc. Nulla varius ex nec ante feugiat.",
+            "With over 15 years of experience, we use manufacturer-approved parts to ensure long-lasting results. We don't just patch the problem; we fix it for good.",
     },
     {
         title: "Transparency",
         description:
-            "Phasellus tristique, elit dapibus cursus facilisis, lorem augue fringilla nunc, vitae fermentum.",
+            "No hidden fees or surprise costs. We provide clear, upfront estimates before any work begins so you know exactly what to expect.",
     },
     {
-        title: "Teamwork",
+        title: "Licensed & Insured",
         description:
-            "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et.",
+            "Rest easy knowing your home is in professional hands. Our team is fully licensed and insured for both gas and electric appliance repairs.",
     },
     {
         title: "Excellence",
         description:
-            "Fusce at massa nec sapien auctor gravida in in tellus. Vivamus a tristique metus, et molestie.",
+            "We strive for 5-star excellence in every home we enter. From clean workspaces to friendly communication, our reputation is built on being Windsor’s most reliable experts.",
     },
 ];
 
@@ -55,8 +54,8 @@ const optimizedImage = await getImage({
     <Content2
         title="Our Vision"
         description={[
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "We are a trusted appliance repair company in Windsor, Ontario offering same-day service for all major appliances. As a one-stop service for repairs, we provide complete maintenance, installation and repair service for refrigerators, freezers, dishwashers, washing machines, clothes dryers, and ovens. We work on almost all of the more popular appliance brands.",
+            "Experienced technicians provide all our repair, maintenance, and appliance installation services at affordable prices, and we guarantee our work. At Reliable Home Appliance Service's, our goal is to repair appliances the right way, the first time: No shortcuts. We are proud to provide high quality repairs in Windsor and Essex County. With over 15 years of experience, we guarantee satisfaction with every repair job we complete."
         ]}
         tagline="About"
         image={aboutImage}
@@ -69,15 +68,15 @@ const optimizedImage = await getImage({
                 icon: "lucide:mail",
             },
             {
-                text: "View Details",
-                href: "#",
+                text: "Services",
+                href: "/services",
                 variant: "secondary",
                 icon: "lucide:arrow-right",
             },
         ]}
     />
     <Values
-        items={values}
+        items={companyValues}
         columns={3}
         tagline="Our Values"
         title="What Defines Us"
