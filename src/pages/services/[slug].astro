@@ -1,0 +1,121 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Content from "../../components/widgets/Content.astro";
+import Hero from "../../components/widgets/Hero.astro";
+import type { ACTION_ERROR_CODES } from "astro:actions";
+
+export async function getStaticPaths() {
+  // 1. Grab all images in that folder
+  const images = import.meta.glob("../../assets/images/*.{jpeg,jpg,png,gif,avif,webp}");
+
+  const services = [
+    { 
+      title: "Oven Repair",
+      description: [
+        "Our Oven repair services in Windsor any brand of ranges – also known as cooktops.",
+        "We have over 15 years experience in gas stove repair and electric range repair services. The services we provide in Windsor-Essex include a variety of brands. Our technicians have the know-how and expertise needed to get your stove, range or cooktop back in working order quickly, effectively and at an affordable price."
+      ],
+      slug: "oven-repair", 
+      icon: "mdi:oven",
+      img: images["../../assets/images/stovetop.jpg"](),
+      
+    },
+    { 
+      title: "Stove Repair", 
+      slug: "stove-repair", 
+      icon: "lucide:heater", 
+      img: images["../../assets/images/stove_2.webp"](),
+      description: [
+        "A malfunctioning oven isn't just an inconvenience; it can disrupt your family's routine and even pose a safety risk. Whether it's a gas range that won't ignite or an electric oven heating unevenly, our expert technicians bring over 15 years of specialized experience to every repair in the Windsor-Essex area.",
+        "We service all major brands and models, from high-end convection ovens to standard stovetops. Our team arrives fully equipped to diagnose issues like faulty heating elements, broken thermostats, or ignition problems on the spot. We pride ourselves on transparent pricing and fast, reliable service designed to get your kitchen back in working order safely and efficiently."
+      ],
+    },
+    { 
+      title: "Frige & Freezer Services", 
+      slug: "fridge-freezer-repair", 
+      icon: "lucide:heater", 
+      img: images["../../assets/images/fridge_2.webp"](),
+      description: [
+        "A broken refrigerator is a race against the clock to save your groceries. Whether your fridge is leaking, humming loudly, or simply failing to keep your food at a safe temperature, our Windsor-based team is ready to respond. With over 15 years of experience, we understand the mechanics of every major brand, from modern French door models to industrial-grade freezers.",
+        "We don't just fix the symptoms; we solve the root cause—whether it’s a dusty condenser coil, a failing compressor, or a faulty defrost timer. Our technicians arrive with the most common replacement parts in hand to ensure a fast, same-day diagnosis. Trust us to restore your kitchen’s most essential appliance with the speed and professional care your home deserves."
+      ],
+    },
+    { 
+      title: "Washer Services", 
+      slug: "washer-repair", 
+      icon: "mdi:washing-machine", 
+      img: images["../../assets/images/washers.avif"](),
+      description: [
+        "A broken washing machine can turn a productive day into a stressful mess of soggy clothes and standing water. Whether your washer is refusing to drain, failing to agitate, or shaking violently during the spin cycle, our technicians bring over 15 years of hands-on experience to every home in the Windsor-Essex region.",
+        "We specialize in diagnosing and repairing both top-load and front-load machines, handling everything from worn-out drive belts and failing pumps to complex electronic control board issues. Our goal is to provide a fast, reliable fix that prevents further damage to your floors and gets your household's laundry schedule back on track the very same day."
+      ],
+    },
+    { 
+      title: "Dryer Services", 
+      slug: "dryer-repair", 
+      icon: "mdi:tumble-dryer", 
+      img: images["../../assets/images/dryers.webp"](),
+      description: [
+        "A dryer that takes multiple cycles to dry or makes concerning squeaking noises isn't just inefficient—it’s a potential fire hazard. From thermal fuse replacements to drum bearing repairs, our technicians bring over 15 years of experience to every service call in Windsor and the surrounding areas.",
+        "We specialize in both Gas and Electric dryers, ensuring your heating elements, sensors, and exhaust systems are functioning at peak performance. Our goal is to provide a fast, affordable repair that restores your appliance's efficiency, saves you money on energy bills, and gives you the peace of mind that your home is safe."
+      ],
+    },
+    { 
+      title: "Dishwasher Services", 
+      slug: "dishwasher-repair", 
+      icon: "mdi:dishwasher", 
+      img: images["../../assets/images/dishwasher-repair.jpg"](),
+      description: [
+        "A leaking or poorly draining dishwasher is more than just a chore—it’s a risk to your kitchen’s flooring and cabinetry. Whether your unit is leaving spots on glassware, failing to heat the water, or simply won't start, our Windsor-Essex technicians bring over 15 years of specialized experience to restore your kitchen's most time-saving appliance.",
+        "From installing brand-new high-efficiency models to repairing complex pump assemblies and electronic control boards, we handle it all with precision. We pride ourselves on a 'fix it right the first time' approach, ensuring your dishwasher operates quietly, sanitizes effectively, and runs leak-free so you can get back to enjoying your home without the extra dishes."
+      ],
+    },
+  ];
+
+  const resolvedServices = await Promise.all(
+  services.map(async (s) => {
+    const imgModule = await s.img; // Await the function call
+    return {
+      ...s,
+      img: imgModule.default, // Grab the actual metadata
+    };
+  })
+);
+
+  return resolvedServices.map((s) => ({
+    params: { slug: s.slug },
+    props: { service: s },
+  }));
+}
+
+const { service } = Astro.props;
+
+const contentProps = {
+    title: service.title,
+    image: service.img, 
+    imageAlt: `${service.title} image`,
+    description: service.description,
+    tagline: "Service",
+    
+};
+---
+
+<BaseLayout metadata={{ title: service.title }}>
+  <Content {...contentProps}/>
+  <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a 
+        href="/services" 
+        class="inline-flex items-center justify-center px-10 py-4 text-lg font-semibold text-muted-foreground bg-transparent border-2 border-muted-foreground/20 rounded-xl transition-all duration-300 hover:bg-muted-foreground/5 hover:border-muted-foreground/50 active:scale-95 w-full sm:w-auto"
+      >
+        ← Other Services
+      </a>
+
+      <a 
+        href="/contact" 
+        class="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white bg-blue-600 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl hover:bg-blue-700 active:scale-95 w-full sm:w-auto"
+      >
+        Book {service.title} Now
+      </a>
+    </div>
+  
+</BaseLayout>
